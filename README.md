@@ -4,6 +4,24 @@ This is a front-end application which would help users list and browse all launc
 
 Find this project hosted at https://projects-76dc3.web.app/home
 
+## Screenshots
+
+Mobile View -
+
+![Mobile View](https://github.com/rakshithajs/space-x/blob/main/Screenshot-MobileScreen.jpg)
+
+Tablet View -
+
+![Tablet View](https://github.com/rakshithajs/space-x/blob/main/Screenshot-TabletView.png)
+
+Desktop View -
+
+![Desktop View](https://github.com/rakshithajs/space-x/blob/main/Screenshot-DesktopView.png)
+
+Lighthouse Score -
+
+![Lighthouse Score](https://github.com/rakshithajs/space-x/blob/main/Screenshot-Lighthouse.png)
+
 ## Set-up
 
 Angular CLI version used is 8.0.1.
