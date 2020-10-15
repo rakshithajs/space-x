@@ -62,7 +62,7 @@
     <section class="listSection" *ngIf="spaceXdataArray.length">
       <div class="card" *ngFor="let item of spaceXdataArray">
         <div class="image">
-          <img src="{{item.image}}">
+          <img src="{{item.image}}" alt="{{item.missionName}}">
         </div>
         <div class="name">
           {{item.missionName}} #{{item.flightNo}}
