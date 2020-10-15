@@ -8,12 +8,6 @@ import { HttpService } from '../http.service';
 })
 export class LandingPageComponent implements OnInit {
 
-  /**
-   * ng serve --host=0.0.0.0
-   * VIEWPORT
-   * SEMANTIC HTML
-   * angular universal
-   */
   minYear = 2006;
   maxYear = 2019;
   years = [];
@@ -30,9 +24,8 @@ export class LandingPageComponent implements OnInit {
   }
 
   getInitialData(filter: any = {}) {
-    this.http.get('https://api.spacexdata.com/v3/launches?limit=8', filter).subscribe(
+    this.http.get('https://api.spacexdata.com/v3/launches?limit=100', filter).subscribe(
       (response: any) => {
-        console.log('resp-=', response);
         this.spaceXdataArray = [];
         if (response.length) {
           response.forEach((item) => {
@@ -54,7 +47,6 @@ export class LandingPageComponent implements OnInit {
         console.log('Error Occurred ==> ', err);
       }
     );
-    // https://api.spacexdata.com/v3/launches?limit=100
   }
 
   setFilter(type = 0, value: any = '') {

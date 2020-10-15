@@ -1,11 +1,11 @@
-<div class="main">
-  <div class="header">
+<section class="main">
+  <header class="header">
     SpaceX Launch Programs
-  </div>
+  </header>
 
-  <div class="section">
+  <section class="section">
     <!-- Filters here -->
-    <div class="filterSection">
+    <aside class="filterSection">
       <div class="filters">
         <div class="filHead">
           Filters
@@ -57,9 +57,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </aside>
     <!-- List here -->
-    <div class="listSection" *ngIf="spaceXdataArray.length">
+    <section class="listSection" *ngIf="spaceXdataArray.length">
       <div class="card" *ngFor="let item of spaceXdataArray">
         <div class="image">
           <img src="{{item.image}}">
@@ -101,15 +101,15 @@
             </span>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </section>
   <!-- Developer info -->
-  <div class="developerInfo">
+  <footer class="developerInfo">
     <div class="infoHeading">
       Developed by:
     </div>
     <div class="infoName">
       Rakshitha J S
     </div>
-  </div>
-</div>
+  </footer>
+</section>
