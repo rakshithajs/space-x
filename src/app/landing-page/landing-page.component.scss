@@ -1,0 +1,443 @@
+.main {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+
+  .header {
+    padding: 3%;
+    width: 94%;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .section {
+    padding: 1%;
+    margin: 3%;
+    .filterSection {
+      background: #fff;
+      padding: 2%;
+      border-radius: 4px;
+
+      .filHead {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 1%;
+      }
+
+      .launchYear {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding: 2%;
+        .label {
+          border-bottom: solid 1px #cdcdcd;
+          margin: 0px 5px 0px 5px;
+          width: 85%;
+        }
+
+      }
+      .yearLoop {
+        background-color: #fff;
+        display: flex;
+        width: 98%;
+        flex-direction: row;
+        padding: 2%;
+        flex-wrap: wrap;
+        .years {
+          width: calc(46% - 16px);
+          padding: 8px;
+          border-radius: 4px;
+          margin: 0% 2%;
+          text-align: center;
+          .button {
+            background: #c5e09b;
+            width: 80%;
+            border: none;
+            padding: 6px 6px;
+            border-radius: 4px;
+            font-size: 18px;
+          }
+
+          .buttonActive {
+            outline: none;
+            background: #7cb806;
+          }
+        }
+      }
+    }
+
+    .listSection {
+      display: flex;
+      flex-direction: column;
+      width: 92%;
+      border-radius: 4px;
+      
+      .card {
+        border-radius: 4px;
+        padding: 6%;
+        background: #fff;
+        margin: 4% 0%;
+        width: 97%;
+        .image {
+          background-color: #f2f2f2;
+          text-align: center;
+          img {
+            width: 60%;
+          }
+        }
+
+        .name {
+          margin: 5% 0%;
+          font-size: 20px;
+          font-weight: bold;
+          color: #44478a;
+        }
+
+        .missionIds {
+          .label {
+            font-weight: bold;
+            font-size: 18px;
+          }
+
+          li {
+            margin-left: 4%;
+            color: #44478a;
+            color: #44478a;
+            font-size: 16px;
+            margin: 1% 0% 1% 4%;
+          }
+        }
+
+        .row {
+
+          display: flex;
+          flex-direction: row;
+
+          .heading {
+            font-size: 16px;
+            font-weight: bold;
+            max-width: 45%;
+            padding: 2%;
+            padding-left: 0px;
+          }
+          .data {
+            font-size: 12px;
+            font-size: 16px;
+            color: darkblue;
+            padding: 2%;
+            padding-left: 0px;
+          }
+
+        }
+      }
+    }
+
+  }
+  .developerInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .infoHeading {
+      font-weight: bold;
+      font-size: 17px;
+      padding: 2% 0%;
+    }
+
+    .infoName {
+      font-size: 17px;
+      padding: 1% 0%;
+    }
+  }
+}
+
+// for Tablet view
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .main {
+
+    .header {
+      padding: 1% 3%;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      margin: 1%;
+      margin-top: 0%;
+      
+      .filterSection {
+        width: 16%;
+        padding: 1%;
+        // height ??
+        .yearLoop {
+          width: 96%;
+
+          .years {
+            margin: 0% 1%;
+            padding: 6px;
+
+            .button {
+              background: #c5e09b;
+              width: 82%;
+              border: none;
+              padding: 5px 7px;
+              border-radius: 4px;
+              font-size: 14px;
+            }
+
+            .buttonActive {
+              outline: none;
+              background: #7cb806;
+            }
+          }
+        }
+      }
+
+      .listSection {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        margin: 0% 2%;
+        flex-wrap: wrap;
+        border-radius: 4px;
+        margin-right: 0%;
+
+        .card {
+          width: 44%;
+          border-radius: 4px;
+          padding: 2% 2%;
+          background: #fff;
+          margin: 0% 1% 2% 1%;
+          &:last-child {
+            margin-bottom: 0%;
+          }
+
+          &:nth-last-child(2) {
+            margin-bottom: 0%;
+          }
+        }
+
+      }
+    }
+
+    .developerInfo {
+
+      .infoHeading {
+        padding: 0%;
+      }
+    }
+  }
+}
+
+// for Desktop view
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .main {
+
+    .header {
+      padding: 1% 3%;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      margin: 1%;
+      margin-top: 0%;
+      
+      .filterSection {
+        width: 16%;
+        padding: 1%;
+        // height ??
+        .yearLoop {
+          width: 96%;
+
+          .years {
+            margin: 0% 1%;
+            padding: 6px;
+
+            .button {
+              background: #c5e09b;
+              width: 82%;
+              border: none;
+              padding: 5px 7px;
+              border-radius: 4px;
+              font-size: 14px;
+            }
+            .buttonActive {
+              outline: none;
+              background: #7cb806;
+            }
+          }
+        }
+      }
+
+      .listSection {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        /* padding: 0% 2%; */
+        margin: 0% 2%;
+        flex-wrap: wrap;
+        border-radius: 4px;
+        margin-right: 0%;
+
+        .card {
+          width: 21%;
+          border-radius: 4px;
+          padding: 1% 1%;
+          background: #fff;
+          margin: 0% 1% 2% 1%;
+
+          .image {
+            img {
+              width: 85%;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0%;
+          }
+
+          &:nth-last-child(2) {
+            margin-bottom: 0%;
+          }
+
+          &:nth-last-child(3) {
+            margin-bottom: 0%;
+          }
+
+          &:nth-last-child(4) {
+            margin-bottom: 0%;
+          }
+        }
+
+      }
+    }
+
+    .developerInfo {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      .infoHeading {
+        font-weight: bold;
+        font-size: 25px;
+        padding: 1% 0%;
+      }
+
+      .infoName {
+        padding: 1%;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+// viewport: 1440px
+@media only screen and (min-width: 1440px) {
+  .main {
+
+    .header {
+      padding: 1% 2%;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      margin: 1%;
+      margin-top: 0%;
+
+      .filterSection {
+        width: 16%;
+        padding: 1%;
+        // height ??
+        .yearLoop {
+          width: 96%;
+
+          .years {
+            margin: 0% 1%;
+            padding: 6px;
+
+            .button {
+              background: #c5e09b;
+              width: 82%;
+              border: none;
+              padding: 5px 7px;
+              border-radius: 4px;
+              font-size: 14px;
+            }
+
+            .buttonActive {
+              outline: none;
+              background: #7cb806;
+            }
+          }
+        }
+      }
+
+      .listSection {
+        display: flex;
+        width: 80%;
+        flex-direction: row;
+        /* padding: 0% 2%; */
+        margin: 0% 2%;
+        flex-wrap: wrap;
+        border-radius: 4px;
+        margin-right: 0%;
+
+        .card {
+          width: 21%;
+          border-radius: 4px;
+          padding: 1% 1%;
+          background: #fff;
+          margin: 0% 1% 2% 1%;
+
+          .image {
+            img {
+              width: 85%;
+            }
+          }
+          &:last-child {
+            margin-bottom: 0%;
+          }
+
+          &:nth-last-child(2) {
+            margin-bottom: 0%;
+          }
+
+          &:nth-last-child(3) {
+            margin-bottom: 0%;
+          }
+
+          &:nth-last-child(4) {
+            margin-bottom: 0%;
+          }
+        }
+      }
+    }
+
+    .developerInfo {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: center;
+      .infoHeading {
+        font-weight: bold;
+        font-size: 25px;
+        padding: 1% 0%;
+      }
+
+      .infoName {
+        padding: 1%;
+        font-size: 24px;
+      }
+    }
+  }
+}

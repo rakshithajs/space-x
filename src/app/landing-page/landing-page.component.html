@@ -1,0 +1,115 @@
+<div class="main">
+  <div class="header">
+    SpaceX Launch Programs
+  </div>
+
+  <div class="section">
+    <!-- Filters here -->
+    <div class="filterSection">
+      <div class="filters">
+        <div class="filHead">
+          Filters
+        </div>
+        <div class="launchYear">
+          <div class="label">
+            <div>Launch Year</div>
+          </div>
+        </div>
+        <div class="yearLoop">
+          <div class="years" *ngFor="let item of years">
+            <div class="button" [ngClass]="{'buttonActive': item==filter.launch_year}" (click)="setFilter(0, item)">
+              {{item}}
+            </div>
+          </div>
+        </div>
+        <div class="launchYear">
+          <div class="label">
+            <div> Successful Launch </div>
+          </div>
+        </div>
+        <div class="yearLoop">
+          <div class="years">
+            <div class="button" [ngClass]="{'buttonActive': filter.launch_success===true}" (click)="setFilter(1, true)">
+              True
+            </div>
+          </div>
+          <div class="years">
+            <div class="button" [ngClass]="{'buttonActive': filter.launch_success===false}" (click)="setFilter(1, false)">
+              False
+            </div>
+          </div>
+        </div>
+        <div class="launchYear">
+          <div class="label">
+            <div> Successful Landing </div>
+          </div>
+        </div>
+        <div class="yearLoop">
+          <div class="years">
+            <div class="button" [ngClass]="{'buttonActive': filter.land_success===true}" (click)="setFilter(2, true)">
+              True
+            </div>
+          </div>
+          <div class="years">
+            <div class="button" [ngClass]="{'buttonActive': filter.land_success===false}" (click)="setFilter(2, false)">
+              False
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- List here -->
+    <div class="listSection" *ngIf="spaceXdataArray.length">
+      <div class="card" *ngFor="let item of spaceXdataArray">
+        <div class="image">
+          <img src="{{item.image}}">
+        </div>
+        <div class="name">
+          {{item.missionName}} #{{item.flightNo}}
+        </div>
+        <div class="missionIds">
+          <div class="label">Mission IDs:</div>
+          <li *ngFor="let ids of item.missionIds">
+            {{ids}}
+          </li>
+          <li *ngIf="!item.missionIds.length">
+            N/A
+          </li>
+        </div>
+        <div class="row">
+            <span class="heading">
+              Launch Year:
+            </span>
+            <span class="data">
+              {{item.launchYear}}
+            </span>
+        </div>
+        <div class="row">
+            <span class="heading">
+              Successful Launch:
+            </span>
+            <span class="data">
+              {{item.launchSuccess}}
+            </span>
+        </div>
+        <div class="row">
+            <span class="heading">
+              Successful Landing:
+            </span>
+            <span class="data">
+              {{item.launchLanding}}
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Developer info -->
+  <div class="developerInfo">
+    <div class="infoHeading">
+      Developed by:
+    </div>
+    <div class="infoName">
+      Rakshitha J S
+    </div>
+  </div>
+</div>
